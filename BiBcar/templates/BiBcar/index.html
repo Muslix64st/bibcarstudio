@@ -1,0 +1,366 @@
+{% extends 'BiBcar/base.html' %}
+{% load static %}
+{% load bibcar_tags %}
+
+                                                {% block content_header %}
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Header Section Begin конпки меню верхние-->
+    <header class="header-section">
+                                              {% endblock content_header %}
+<!--------------------------------------------------menu----------------------------------------------------------- -->
+<!------------------------------------------------end menu--------------------------------------------------------- -->
+                                                {% block content_up %}
+    </header>
+    <section class="hero-section">
+            <div class="hero-items owl-carousel">
+                {% for p in post %}
+                        <div class="single-hero-item set-bg" data-setbg={{ p.photo_b.url }}>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="hero-text">
+                                             <ul>
+                                                <li><H2>{{ p.title }}</H2></li>
+                                                <li><H2>{{ p.titlex }}</H2></li>
+                                            </ul>
+                                            <a href={{ p.get_absolute_url }} class="primary-btn">Узнать больше</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+    </section>
+    <!-- Верхняя  карусель конец -->
+
+    <!-- Feature Section Begin -->
+    <section class="feature-section">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="feature-item set-bg" data-setbg={% static 'BiBcar/img/feature/feature-1.jpg'%}>
+                        <h3>Полировка</h3>
+                        <p>Возвращает автомобилю прежний насыщенный цвет,<br />
+                            зеркальный глянец,<br />
+                            избавляет поверхность от потертостей. <br />
+                            Машина после работы приобретает салонный внешний вид</p>
+                        <a href="{% url 'contact' %}" class="primary-btn f-btn">Записаться</a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="feature-item set-bg" data-setbg={% static 'BiBcar/img/feature/feature-2.jpg'%}>
+                        <h3>Химчистка</h3>
+                        <p>Химчистка автомобиля - это процесс глубокой очистки<br />
+                            всех поверхностей от различных загрязнений, пятен и пыли<br />
+                            при помощи специальных моющих средств и инструментов.</p>
+                        <a href="{% url 'contact'  %}" class="primary-btn f-btn">Записаться</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-item set-bg" data-setbg={% static 'BiBcar/img/feature/feature-3.jpg'%}>
+                        <h3>Керамика</h3>
+                        <p>Керамика или жидкое стекло — особый состав,<br />
+                            который образует на поверхности машины защитный прочный слой.<br />
+                            Нанесение такого средства улучшает эксплуатационные качества ЛКП </p>
+                        <a href="{% url  'contact'  %}" class="primary-btn f-btn">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature Section End -->
+
+    <!-- About Section Begin -->
+    <section class="home-about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <h2>WELCOME TO BiBcar studio</h2>
+                        <p class="short-details">Подпишись на наш телеграм канал получай скидку и будь в курсе новинок
+                        из мира Deteiling </p>
+                        <p class="long-details">Переходи в телеграм </p>
+                        <!-- Создать телеграмм бота ----------------------------------------------------------------------------------->
+                        <a href="#" class="primary-btn about-btn">Телеграм</a>
+                        <!-- телеграмм бот ---------------------------------------------------------------------------------------------->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src={% static 'BiBcar/img/home-about.png'%} alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Classes Section Begin -->
+    <section class="classes-section">
+        <div class="class-title set-bg" data-setbg={% static 'BiBcar/img/classes-title-bg.jpg'%}>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 m-auto text-center">
+                        <div class="section-title pl-lg-4 pr-lg-4 pl-0 pr-0">
+                            <h2>Предварительная запись</h2>
+                            <p>Позволит вам сэкономить своё время</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                                                                <!-- Блок цен на услуги -->
+
+    <section class="price-section spad set-bg" data-setbg={% static 'BiBcar/img/price-bg.jpg'%}>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Выбери свой пакет услуг</h2>
+                        <p> и наши сотрудники свяжуться с вами.</p>
+                    </div>
+                    <div class="toggle-option">
+                        <ul>
+                            <li>Хочу скидку</li>
+                            <li>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </li>
+                            <li>Хочу быстро</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                                                                            <!-- Полировка -->
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Полировка</h4>
+                        <div class="price-plan">
+                            <h2>9 999 <span>от</span></h2>
+                            <p>BiB car studio</p>
+                        </div>
+                        <ul>
+                            <li>Защитная</li>
+                            <li>Стандартная</li>
+                            <li>Легкая полировка</li>
+                            <li>Финишная полировка</li>
+
+                        </ul>
+                        <a href="{% url 'contact'  %}" class="primary-btn price-btn">Выбрать</a>
+                        <div class="tic-text">
+                                <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                                                                                <!-- Химчитска -->
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Химчистка</h4>
+                        <div class="price-plan">
+                            <h2>3 999 <span>от</span></h2>
+                            <p>BiB car studio</p>
+                        </div>
+                            <ul>
+                                <li>Пластика</li>
+                                <li>Багажника</li>
+                                <li>Салона из кожи</li>
+                                <li>Салона из ткани</li>
+                            </ul>
+                            <a href="{% url 'contact'  %}" class="primary-btn price-btn">Выбрать</a>
+                            <div class="tic-text">
+                                <i class="fa fa-star"></i>
+                            </div>
+                    </div>
+                </div>
+                                                                                <!-- Нанокерамика -->
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Нанокерамика</h4>
+                        <div class="price-plan">
+                            <h2> 9 999 <span>от</span></h2>
+                            <p>BiB car studio</p>
+                        </div>
+                        <ul>
+                            <li>Полное покрытие</li>
+                            <li>вашего автомобиля</li>
+                            <li>защитными средствами</li>
+                            <li>Профессиональный уход</li>
+                        </ul>
+                        <a href="{% url 'contact'  %}" class="primary-btn price-btn">Выбрать</a>
+                        <div class="tic-text">
+                                <i class="fa fa-star"></i>
+                            </div>
+                    </div>
+                </div>
+                                                                                <!-- Оклейка плёнкой -->
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Оклейка плёнкой</h4>
+                        <div class="price-plan">
+                            <h2>3 999 <span>от</span></h2>
+                            <p>BiB car studio</p>
+                        </div>
+                        <ul>
+                            <li>Фары</li>
+                            <li>Капот</li>
+                            <li>Бампер</li>
+                            <li>Полная оклейка авто</li>
+                        </ul>
+                        <a href="{% url 'contact'  %}" class="primary-btn price-btn">Выбрать</a>
+                        <div class="tic-text">
+                                <i class="fa fa-star"></i>
+                            </div>
+                    </div>
+                </div>
+                                                                                <!-- Тюнинг фар -->
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>Тюнинг фар</h4>
+                        <div class="price-plan">
+                            <h2>1 999 <span>от</span></h2>
+                            <p>BiB car studio</p>
+                        </div>
+                        <ul>
+                            <li>Установка линз</li>
+                            <li>Полировка линз</li>
+                            <li>Запотевание фар</li>
+                            <li>Установка Bi led оптики</li>
+                        </ul>
+                        <a href="{% url 'contact'  %}" class="primary-btn price-btn">Выбрать</a>
+                        <div class="tic-text">
+                                <i class="fa fa-star"></i>
+                            </div>
+                    </div>
+                </div>
+                                                                                <!-- Price Plan Section Begin -->
+                <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>3-х фазная мойка</h4>
+                        <div class="price-plan">
+                            <h2>999 <span>от</span></h2>
+                            <p>BiB car studio</p>
+                        </div>
+                        <ul>
+                            <li>3-х фазная мойка</li>
+                            <li>вашего автомобиля</li>
+                            <li>профессиональными средствами</li>
+                            <li>подготовка к продажи или полировке</li>
+                        </ul>
+                        <a href="{% url 'contact'  %}" class="primary-btn price-btn">Выбрать</a>
+                        <div class="tic-text">
+                                <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+                                                                         <!-- Конец блока цен -->
+
+    <!-- Video Section Begin -->
+    <section class="video-section set-bg" data-setbg={% static 'BiBcar/img/video-bg.jpg'%}>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-text">
+                        <h2>detailing car</h2>
+                        <a href="https://www.youtube.com/watch?v=oBSTsqm-5OI" class="play-btn video-popup">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Внимание к каждой детали</h2>
+                        <p>BiB car studio номер 1 в мире detailing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row blog-gird">
+                <div class="grid-sizer"></div>
+                <div class="col-lg-4 col-md-6 grid-item">
+                    <div class="blog-item large-item set-bg" data-setbg={% static 'BiBcar/img/blog/blog-1.jpg'%}>
+                        <a href="#" class="blog-text">
+                            <div class="categories">BiB car studio </div>
+                            <h5>Забота о вашей машине</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grid-item">
+                    <div class="blog-item instagram-item">
+                        <a href="#" class="instagram-text">
+                            <div class="categories">Ждём Вас <i class="fa fa-instagram"></i></div>
+                            <h5>BiB car studio Качество складывается из мелочей</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grid-item">
+                    <div class="blog-item small-item set-bg" data-setbg={% static 'BiBcar/img/blog/blog-2.jpg'%}>
+                        <a href="#" class="blog-text">
+                            <div class="categories">BiB car studio</div>
+                            <h5>Без нареканий!</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grid-item">
+                    <div class="blog-item large-item xls-large set-bg" data-setbg={% static 'BiBcar/img/blog/blog-3.jpg'%}>
+                        <a href="#" class="blog-text">
+                            <div class="categories">BiB car studio </div>
+                            <h5>Качество по новым стандартам</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grid-item">
+                    <div class="blog-item large-item set-bg" data-setbg={% static 'BiBcar/img/blog/blog-polirovka.jpg'%}>
+                        <a href="#" class="blog-text">
+                            <div class="categories">BiB car studio</div>
+                            <h5>Приверженность качеству</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grid-item">
+                    <div class="blog-item small-item set-bg" data-setbg={% static 'BiBcar/img/blog/blog-5.jpg'%}>
+                        <a href="#" class="blog-text">
+                            <div class="categories">BiB car studio</div>
+                            <h5>Безупречность в деталях</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+                                                        {% endblock content_up %}
+                                                        <!-- Вставка телеграм -->
+                                                        {% block content_down %}
+    <!-- Map Section Begin -->
+
+                                                             {% show_form %}
+</body>
+
+                                                        {% endblock content_down %}

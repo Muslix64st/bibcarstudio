@@ -1,0 +1,117 @@
+{% extends 'BiBcar/base.html' %}
+{% load bibcar_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+{% block content_header %}
+
+
+    <body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+    <header class="header-section header-normal">
+{% endblock content_header %}
+<!--------------------------------------------------menu----------------------------------------------------------- -->
+<!------------------------------------------------end menu--------------------------------------------------------- -->
+{% block content_up %}
+    </header>
+    <!---------------------------------------------------------------------------------------------------------------- -->
+    <section class="blog-single-hero set-bg" data-setbg="{% static 'BiBcar/img/blog-single-hero.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-7 m-auto text-center">
+                    <div class="bs-hero-text">
+                        <h2>{{ content.title }}</h2>
+                        <h2>{{ content.titlex }}</h2>
+                        <ul>
+                            <li>Белгородская область</li>
+                            <li>Губкин</li>
+                            <li> улица Артёма</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------------------------------------------------------- -->
+    <section class="blog-single-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog-single-text">
+                                <div class="blog-title">
+                                    <h4>{{ content.title }}</h4>
+                                    <h4>{{ content.titlex }}</h4>
+                                    <p>{{ content.content | linebreaks }}</p>
+                                </div>
+                        <div class="blog-pic">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="{% static 'BiBcar/img/blog-single-1.jpg' %}">
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="{% static 'BiBcar/img/blog-single-2.jpg' %}">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <img src="{% static 'BiBcar/img/blog-single-3.jpg' %}">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="{% static 'BiBcar/img/blog-single-4.jpg' %}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-quote">
+                            <i class="fa fa-quote-left"></i>
+                            <div class="quote-text">Мы предоставляем полный комплекс услуг квалифицированного ухода
+                                за автомобилем, используя только профессиональное оборудование
+                                и высококачественные расходные материалы от лучших брендов рынка
+                            </div>
+                            <h5>BiB car studio</h5>
+                        </div>
+                        <div class="blog-tag-share">
+                            <div class="tags">
+                                <a href="#">Консультация</a>
+                                <a href="#">Записаться</a>
+                            </div>
+                            <div class="social-share">
+                                <span>Мы в социальных сетях:</span>
+                                <a href="#"><i class="fa fa-telegram"></i></a>
+                                <a href="https://vk.com/bibcarstudio"><i class="fa fa-vk"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="recent-news">
+                    <h4>Всё о детейлинге</h4>
+                    <div class="row">               {% for p in post %}
+                        <div class="col-lg-4">
+                            <div class="recent-item set-bg" data-setbg="{{ p.photo_s.url }}"> </a>
+                                <a href="{{ p.get_absolute_url }}" class="recent-text">
+                                    <div class="categories">BiB car studio</div>
+                                    <h5>{{ p.title }}</h5>
+                                    <h5>{{ p.titlex }}</h5>
+                                </a>
+                            </div>
+                        </div>                          {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                                                        {% endblock content_up %}
+                                                        {% block content_down %}
+                                                            {% show_form %}
+                                                        {% endblock content_down %}
+</body>
+

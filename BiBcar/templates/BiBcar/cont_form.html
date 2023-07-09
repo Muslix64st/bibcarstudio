@@ -1,0 +1,39 @@
+{% load bibcar_tags %}
+
+<div class="contact-form">
+    <i class="fa fa-phone"></i>
+    <h4>Мы перезвоним вам</h4>
+    <form action="{% url 'UserForm' %}" method="post">
+        {% csrf_token %}
+        <div class="row">
+                                        {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                                        {% endif %}
+
+            <div class="col-lg-6" for = "{{ form.name.id_for_label }}">
+                                         {{ form.name.label }}
+                                         {{ form.name}}</div>
+
+
+            <div class="col-lg-6" for = "{{ form.phone_number.id_for_label }}">
+                                         {{ form.phone_number.label }}
+                                         {{ form.phone_number }}</div>
+
+            <div class="col-lg-6" for = "{{ form.car_number.id_for_label }}">
+                                          {{ form.car_number.label }}
+                                          {{ form.car_number }}</div>
+
+            <div class="col-lg-12" for = "{{ form.message.id_for_label }}">
+                                         {{ form.message.label }}
+                                          {{ form.message }}
+
+                <button type="submit" class="site-btn">Перезвонить</button></div>
+
+        </div>
+    </form>
+    </div>
+</div>

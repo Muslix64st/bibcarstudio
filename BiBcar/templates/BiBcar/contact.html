@@ -1,0 +1,57 @@
+{% extends 'BiBcar/base.html' %}
+{% load bibcar_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+                                             {% block content_header %}
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header-section header-normal">
+
+                                              {% endblock content_header %}
+<!--------------------------------------------------menu----------------------------------------------------------- -->
+<!------------------------------------------------end menu--------------------------------------------------------- -->
+                                                {% block content_up %}
+
+    </header>
+    <section class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact-info">
+                        <h4>Котакты</h4>
+                        <ul>
+                            <li><i class="fa fa-phone"></i>номер телефона</li>
+                            <li><i class="fa fa-envelope"></i>или почта или ТГ или VK</li>
+                        </ul>
+                    </div>
+                    <div class="contact-address">
+                        <h4>Адрес</h4>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i> Белгородская область Губкин улица Артёма
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 offset-lg-1">
+
+                    {% show_form %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+                                                {% endblock content_up %}
+
+                                                {% block content_down %}
+                                                {% endblock content_down %}
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+{% extends 'BiBcar/base.html' %}
+{% load static %}
+{% load bibcar_tags %}
+
+                                                {% block content_header %}
+
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+    <header class="header-section header-normal">
+                                        {% endblock content_header %}
+<!--------------------------------------------------menu----------------------------------------------------------- -->
+<!------------------------------------------------end menu--------------------------------------------------------- -->
+                                          {% block content_up %}
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="{% static 'BiBcar/img/about-bread.jpg'%}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>About Us</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="{% url 'home' %}"><i class="fa fa-home"></i> Главная</a>
+                            <span>О нас</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- Aboutus Section Begin -->
+    <section class="aboutus-section spad">
+        <div class="container">
+            <div class="aboutus-page-text">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 m-auto">
+                        <div class="section-title">
+                                                                                    <!-- для яндекса -->
+                            <h2>BiB car studio</h2>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'BiBcar/img/about-us.jpg'%}" alt="">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-us">
+                            <h4>О нас</h4>
+                                                                                    <!-- для яндекса -->
+                                <p>Мы, студия BiBcar - команда амбициозных людей, фанатеющие и любящие свое дело.
+                                7 лет назад мы начинали вдвоём в гараже, а сейчас в собственной профессиональной студии
+                                расположенной по адресу Белгородская область Губкин улица Артёма,
+                                способной предложить весь спектр услуг от чашки ароматного кофе до воплощения мечты.</p>
+
+                            <p>Каждый год мы росли и развивались, ставили новые цели и стремились к новым горизонтам.
+                               Мы продолжаем учиться, а наши клиенты ставят перед нами все новые и новые задачи.</p>
+
+                            <p>Когда-то в качестве хобби мы начали оклеивать автомобили, сегодня на профессиональном
+                               уровне мы оказываем такие услуги как: оклейка автомобильными и рекламными плёнками,
+                               защита автомобилей полиуретановыми пленками, детейлинг, нанесение защитных покрытий,
+                               полировка кузова, шумоизоляция.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-quality">
+                            <h4>Наша работа</h4>
+                            <p>Мы предоставляем полный комплекс услуг квалифицированного ухода
+                                за автомобилем, используя только профессиональное оборудование
+                                и высококачественные расходные материалы от лучших брендов рынка</p>
+                            <ul>
+                                <li><i class="fa fa-check-circle-o"></i>Полировка ЛКП кузова автомобиля.</li>
+                                <li><i class="fa fa-check-circle-o"></i>Химчистка салона автомобиля.</li>
+                                <li><i class="fa fa-check-circle-o"></i>Нанесение керамической защиты.</li>
+                                <li><i class="fa fa-check-circle-o"></i>Оклейка плёнкой вашего авто. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Aboutus Section End -->
+
+    <!-- Testimonial Section End -->
+    <section class="testimonial-section set-bg spad" data-setbg="{% static 'BiBcar/img/testimonial-bg.jpg'%}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="ts-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <h4>Отличный детейлинг центр, делал полировку кузова, и покрытие.
+                                Работу делают быстро и качественно, к работе относятся добросовестно и цены низкие.
+                                Машина теперь сияет ✨ .Обязательно приеду ещё на другие виды работ.</h4>
+                            <div class="author-name">
+                                <h5>Максим Измайлов</h5>
+                                <span>услуга: полировка</span>
+                            </div>
+                            <div class="author-pic">
+                                <img src="{% static 'BiBcar/img/otziv/izmailov.jpg'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="ts-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <h4>Спасибо ребятам, помогли подготовить малышку к продаже,
+                                после такой работы в двойне жаль расставаться с ней.
+                                Весь комплект услуг сделан с большим профессионализмом.
+                                Очень приятно поразило , как люди горят в своем деле
+                                и по-настоящему делают хорошо, доводя все до конца.</h4>
+                            <div class="author-name">
+                                <h5>Ілона Федосеєва</h5>
+                                <span>услуга: предпродажная подготовка</span>
+                            </div>
+                            <div class="author-pic">
+                                <img src="{% static 'BiBcar/img/otziv/ilona.jpg'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="ts-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <h4>Спасибо большое за этого 🐬👍Нет слов,
+                                одни переполняющие эмоции👍😍 Отличная команда
+                                💪Быстро, красиво, приятные скидки и подарочки,
+                                общение и понимание , всё на высшем уровне, спасибо ребят🌟
+                                Приедем обязательно на другие виды работ! Наш 🐬теперь только к Вам❤</h4>
+                            <div class="author-name">
+                                <h5>Юлия $$$$$$</h5>
+                                <span>услуга: полировка + химчистка</span>
+                            </div>
+                            <div class="author-pic">
+                                <img src="{% static 'BiBcar/img/otziv/ula.jpg'%}" alt="">
+                            </div>
+                        </div>
+                            <div class="ts-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <h4>От души! Машина неплохо так освежилась🔥
+                                Показали себя не только с профессиональной
+                                стороны, но и с человеческой🫡🤝</h4>
+                            <div class="author-name">
+                                <h5>Дмитрий Родин</h5>
+                                <span>услуга: полировка</span>
+                            </div>
+                            <div class="author-pic">
+                                <img src="{% static 'BiBcar/img/otziv/dim.jpg'%}" alt="">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Trainer Section Begin -->
+    <section class="trainer-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2> detailing master </h2>
+                        <p>Качество в деталях</p>
+                    </div>
+                </div>
+            </div>
+
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="trainer-item">
+                        <div class="ti-pic">
+                            <img src="{% static 'BiBcar/img/trainer/trainer-2.jpg'%}" alt="">
+                            <div class="ti-links">
+{#                                <a href="#"><i class="fa fa-telegram"></i></a>#}
+                                <a href="https://vk.com/d.shapkin96"><i class="fa fa-vk"></i></a>
+                            </div>
+                            <div class="trainer-text">
+                                <h5>Денис</h5>
+                                   <h5> Шапкин <span>- detailing </span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="trainer-item">
+                        <div class="ti-pic">
+                            <img src="{% static 'BiBcar/img/trainer/trainer-3.jpg'%}" alt="">
+                            <div class="ti-links">
+{#                                <a href="#"><i class="fa fa-telegram"></i></a>#}
+                                <a href="https://vk.com/s.eduardovich93"><i class="fa fa-vk"></i></a>
+                            </div>
+                            <div class="trainer-text">
+                                <h5>Святослав </h5>
+                                <h5>Панкратов <span>- detailing </span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                                                {% endblock content_up %}
+                                                 {% block content_down %}
+                                                      {% show_form %}
+                                                 {% endblock content_down %}
+
+</body>
+</html>

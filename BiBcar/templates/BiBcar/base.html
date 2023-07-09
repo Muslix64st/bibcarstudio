@@ -1,0 +1,92 @@
+{% load static %}
+{% load bibcar_tags %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'BiBcar/img/logo.png'%}">
+    <meta name="description" content="Полировка автомобиля в Губкине, керамическое покрытие в Губкине, химчистка салона  в Губкине">
+    <meta name="yandex-verification" content="34c9a9fab9e9932f" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Полировка, химчистка салона, автодетейлинг">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={% static 'BiBcar/css/bootstrap.min.css'      %}>
+    <link rel="stylesheet" href={% static 'BiBcar/css/font-awesome.min.css'   %}>
+    <link rel="stylesheet" href={% static 'BiBcar/css/elegant-icons.css'      %}>
+    <link rel="stylesheet" href={% static 'BiBcar/css/nice-select.css'        %}>
+    <link rel="stylesheet" href={% static 'BiBcar/css/owl.carousel.min.css'   %}>
+    <link rel="stylesheet" href={% static 'BiBcar/css/magnific-popup.css'     %}>
+    <link rel="stylesheet" href={% static 'BiBcar/css/slicknav.min.css'       %}>
+    <link rel="stylesheet" href={% static 'BiBcar/css/style.css'              %}>
+</head>
+
+                                         {% block content_header %}
+
+                                        {% endblock content_header %}
+<!--------------------------------------------------- Logo ----------------------------------------------------------->
+<div class="container-fluid">
+<div class="logo">
+    <a href="{% url 'home' %}">
+        <img src={% static 'BiBcar/img/logo.png'%} alt="{% static 'BiBcar/img/logo.png'%}">
+    </a>
+</div>
+            <div class="top-social">
+                                <a href="#"><i class="fa fa-telegram"></i></a>
+                                <a href="#"><i class="fa fa-vk"></i></a>
+            </div>
+<!--------------------------------------------------end logo------------------------------------------------------- -->
+<!--------------------------------------------------- menu--------------------------------------------------------- -->
+<div class="container">
+    <div class="nav-menu">
+        <nav class="mainmenu mobile-menu">
+            <ul>
+            {% for m in menu %}
+                     {% if forloop %}
+                         <li><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+                     {% else %}
+                         <li class="active" ><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+                     {% endif %}
+
+            {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</div>
+<div id="mobile-menu-wrap"></div>
+<!------------------------------------------------end menu--------------------------------------------------------- -->
+
+                                          {% block content_up %}
+
+                                        {% endblock content_up %}
+<!-- Cta Section Begin -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cta-text">
+                    <h3>Консультация</h3>
+                    <p>Получи бесплатную консультацию в телеграм!</p>
+                </div>
+                <a href="#" class="primary-btn cta-btn">Телеграм</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Cta Section End -->
+       {% block content_down %}
+                                        {% endblock content_down %}
+
+
+        <!-- Js Plugins -->
+    <script src = {% static 'BiBcar/js/jquery-3.3.1.min.js'         %}> </script>
+    <script src = {% static 'BiBcar/js/bootstrap.min.js'            %}> </script>
+    <script src = {% static 'BiBcar/js/jquery.magnific-popup.min.js'%}> </script>
+    <script src = {% static 'BiBcar/js/mixitup.min.js'              %}> </script>
+    <script src = {% static 'BiBcar/js/jquery.nice-select.min.js'   %}> </script>
+    <script src = {% static 'BiBcar/js/jquery.slicknav.js'          %}> </script>
+    <script src = {% static 'BiBcar/js/owl.carousel.min.js'         %}> </script>
+    <script src = {% static 'BiBcar/js/masonry.pkgd.min.js'         %}> </script>
+    <script src = {% static 'BiBcar/js/main.js'                     %}> </script>
